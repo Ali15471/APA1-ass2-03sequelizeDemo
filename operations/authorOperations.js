@@ -6,9 +6,9 @@ const log = (message) => console.log(`[Operations] [Author] ${message}`)
 // Function to create a new author
 // This is equivalent to: INSERT INTO Authors (name, birthYear) VALUES (?, ?)
 async function createAuthor(name, birthYear) {
-  log(`Creating author: ${name}, born ${birthYear}`)
+    log(`Creating author: ${name}, born ${birthYear}`)
   const author = await Author.create({ name, birthYear })
-  log(`Author created with id: ${author.id}`)
+    log(`Author created with id: ${author.id}`)
   return author
 }
 
